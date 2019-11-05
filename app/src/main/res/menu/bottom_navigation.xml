@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_bottom_navigation_menu_QT"
+        android:enabled="true"
+        android:icon="@drawable/ic_iconfinder_bible_book_cross_chritian_3032478"
+        app:showAsAction="always"
+        android:title="성경"/>
+
+    <item
+        android:id="@+id/action_bottom_navigation_menu_board"
+        android:enabled="true"
+        android:icon="@drawable/ic_border_color_black_24dp"
+        app:showAsAction="always"
+        android:title="게시판"/>
+
+    <item
+        android:id="@+id/action_bottom_navigation_menu_main"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="always"
+        android:title="홈"/>
+
+    <item
+        android:id="@+id/action_bottom_navigation_menu_chatting"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat_black_24dp"
+        app:showAsAction="always"
+        android:title="채팅"/>
+
+    <item
+        android:id="@+id/action_bottom_navigation_menu_setting"
+        android:enabled="true"
+        android:icon="@drawable/ic_iconfinder_settings_984751"
+        app:showAsAction="always"
+        android:title="설정"/>
+
+</menu>

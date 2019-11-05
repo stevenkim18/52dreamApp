@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="52Dream"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/bibleVerse_textView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="8dp"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        android:text="하나님이 세상을 이처럼 사랑하사 독생자를 주셨으니 이는 그를 믿는 자 마다 멸망하지 않고 영생을 얻게 하려 하심이라(요3:16)"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/bulletin_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="주보"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/bibleVerse_textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/introduction_button"
+        app:layout_constraintBottom_toTopOf="@id/people_button"/>
+
+    <Button
+        android:id="@+id/introduction_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="교회소개"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/bibleVerse_textView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/bulletin_button"
+        app:layout_constraintBottom_toTopOf="@id/location_button"/>
+
+    <Button
+        android:id="@+id/people_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="리더소개"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/bulletin_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/location_button"
+        app:layout_constraintBottom_toTopOf="@id/calender_button"/>
+
+    <Button
+        android:id="@+id/location_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="교회위치"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/introduction_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/people_button"
+        app:layout_constraintBottom_toTopOf="@id/webpage_button"/>
+
+    <Button
+        android:id="@+id/calender_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="청년부일정"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/people_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/webpage_button"
+        app:layout_constraintBottom_toTopOf="@id/board_button"/>
+
+    <Button
+        android:id="@+id/webpage_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="CCM듣기"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/location_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/calender_button"
+        app:layout_constraintBottom_toTopOf="@id/photo_button"/>
+
+    <Button
+        android:id="@+id/board_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="게시판"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/calender_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/photo_button"
+        app:layout_constraintBottom_toTopOf="@id/bible_button"/>
+
+    <Button
+        android:id="@+id/photo_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="사진첩"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/webpage_button"
+        app:layout_constraintLeft_toRightOf="@id/board_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chatting_button"/>
+
+    <Button
+        android:id="@+id/bible_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="오늘의 말씀"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/board_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/chatting_button"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/chatting_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="채팅"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/photo_button"
+        app:layout_constraintLeft_toRightOf="@id/bible_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/bottom_navigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:itemBackground="@color/yellow"-->
+        <!--app:itemIconTint="@color/white"-->
+        <!--app:itemTextColor="@color/white"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:menu="@menu/bottom_navigation"/>-->
+
+</android.support.constraint.ConstraintLayout>

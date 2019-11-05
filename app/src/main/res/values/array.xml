@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ageNumber">
+        <item>기수</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+    </string-array>
+
+    <string-array name="VillageName">
+        <item>마을</item>
+        <item>기쁨마을</item>
+        <item>나눔마을</item>
+        <item>낮은마을</item>
+        <item>동담마을</item>
+        <item>사귐마을</item>
+        <item>사랑마을</item>
+        <item>영원마을</item>
+        <item>편지마을</item>
+        <item>화목마을</item>
+        <item>호호마을</item>
+    </string-array>
+
+    <string-array name="category">
+        <item>카테고리</item>
+        <item>공지사항</item>
+        <item>코이노니아</item>
+        <item>기도제목</item>
+        <item>묵상글</item>
+        <item>기타</item>
+    </string-array>
+</resources>

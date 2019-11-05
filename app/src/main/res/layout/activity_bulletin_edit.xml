@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BulletinEditActivity">
+
+    <TextView
+        android:id="@+id/appNameTop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:padding="5dp"
+        android:text="주보수정"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/date_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:hint="날짜 입력"
+        android:inputType="text"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/appNameTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/top_guideline"/>
+
+    <Button
+        android:id="@+id/complete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="완료"
+        app:layout_constraintTop_toBottomOf="@id/appNameTop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/top_guideline"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <!--주보-->
+    <!--1번째 줄-->
+    <TextView
+        android:id="@+id/line1_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bulltein_line"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/top_guideline"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintBottom_toTopOf="@id/line2_textView"/>
+
+    <TextView
+        android:id="@+id/left1_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="찬양과 경배"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/left_guideline"
+        app:layout_constraintBaseline_toBaselineOf="@id/line1_textView"/>
+
+    <TextView
+        android:id="@+id/right1_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="찬양팀"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/right_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/line1_textView"/>
+
+    <!--2번째 줄-->
+    <TextView
+        android:id="@+id/line2_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bulltein_line"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/line1_textView"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintBottom_toTopOf="@id/line3_editText"/>
+
+    <TextView
+        android:id="@+id/left2_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="대표기도"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/left_guideline"
+        app:layout_constraintBaseline_toBaselineOf="@id/line2_textView"/>
+
+    <EditText
+        android:id="@+id/right2_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="대표기도 입력"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/right_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/line2_textView"/>
+
+    <!--3번째 줄-->
+    <EditText
+        android:id="@+id/line3_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="말씀 구절을 입력해주세요"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:ems="10"
+        app:layout_constraintTop_toBottomOf="@id/line2_textView"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintBottom_toTopOf="@id/line4_editText"/>
+
+    <TextView
+        android:id="@+id/left3_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="말씀봉독"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/left_guideline"
+        app:layout_constraintBaseline_toBaselineOf="@id/line3_editText"/>
+
+    <EditText
+        android:id="@+id/right3_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="봉독자 입력"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/right_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/line3_editText"/>
+
+    <!--4번째 줄-->
+    <EditText
+        android:id="@+id/line4_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="말씀 제목을 입력해주세요"
+        android:textSize="12sp"
+        android:ems="10"
+        app:layout_constraintTop_toBottomOf="@id/line3_editText"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintBottom_toTopOf="@id/line5_textView"/>
+
+    <TextView
+        android:id="@+id/left4_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="말씀 선포"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/left_guideline"
+        app:layout_constraintBaseline_toBaselineOf="@id/line4_editText"/>
+
+    <EditText
+        android:id="@+id/right4_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="설교자 입력"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/right_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/line4_editText"/>
+
+    <!--5번째 줄-->
+    <TextView
+        android:id="@+id/line5_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bulltein_line"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/line4_editText"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintBottom_toTopOf="@id/line6_textView"/>
+
+    <TextView
+        android:id="@+id/left5_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="찬양/기도"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/left_guideline"
+        app:layout_constraintBaseline_toBaselineOf="@id/line5_textView"/>
+
+    <TextView
+        android:id="@+id/right5_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="다같이"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/right_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/line5_textView"/>
+
+    <!--6번째 줄-->
+    <TextView
+        android:id="@+id/line6_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bulltein_line"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/line5_textView"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintBottom_toTopOf="@id/line7_textView"/>
+
+    <TextView
+        android:id="@+id/left6_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="환영/축복"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@id/line6_textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/left_guideline" />
+
+    <TextView
+        android:id="@+id/right6_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="다같이"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/right_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/line6_textView"/>
+
+    <!--7번째 줄-->
+    <TextView
+        android:id="@+id/line7_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bulltein_line"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/line6_textView"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintBottom_toTopOf="@id/line8_textView"/>
+
+    <TextView
+        android:id="@+id/left7_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="코이노니아"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/left_guideline"
+        app:layout_constraintBaseline_toBaselineOf="@id/line7_textView"/>
+
+    <TextView
+        android:id="@+id/right7_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="다같이"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/right_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/line7_textView"/>
+
+    <!--8번째 줄-->
+    <TextView
+        android:id="@+id/line8_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bulltein_line"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/line7_textView"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintBottom_toTopOf="@id/line9_textView"/>
+
+    <TextView
+        android:id="@+id/left8_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="마침찬양"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/left_guideline"
+        app:layout_constraintBaseline_toBaselineOf="@id/line8_textView"/>
+
+    <TextView
+        android:id="@+id/right8_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="다같이"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/right_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/line8_textView"/>
+
+
+    <!--9번째 줄-->
+    <TextView
+        android:id="@+id/line9_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bulltein_line"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/line8_textView"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintBottom_toTopOf="@id/line10_textView"/>
+
+    <TextView
+        android:id="@+id/left9_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="축도"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/left_guideline"
+        app:layout_constraintBaseline_toBaselineOf="@id/line9_textView"/>
+
+    <EditText
+        android:id="@+id/right9_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="축도자 입력"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/right_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/line9_textView"/>
+
+
+    <!--10번째 줄-->
+    <TextView
+        android:id="@+id/line10_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bulltein_line"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/line9_textView"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/left10_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="마을모임"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/left_guideline"
+        app:layout_constraintBaseline_toBaselineOf="@id/line10_textView"/>
+
+    <TextView
+        android:id="@+id/right10_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="다같이"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@id/right_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/line10_textView"/>
+
+</android.support.constraint.ConstraintLayout>

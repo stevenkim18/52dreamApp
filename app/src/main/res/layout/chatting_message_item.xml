@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/userName_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="김승우"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/message_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="채팅내용"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toBottomOf="@id/userName_textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/date_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="날짜"
+        android:textSize="10dp"
+        android:textColor="@color/silver"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toBottomOf="@id/message_textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

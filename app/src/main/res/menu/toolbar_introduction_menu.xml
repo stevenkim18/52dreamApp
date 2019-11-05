@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_open_webbrowser"
+        android:icon="@drawable/ic_baseline_open_in_new_24px"
+        android:title="웹브라우져에서 보기"
+        app:showAsAction="always"/>
+
+
+</menu>

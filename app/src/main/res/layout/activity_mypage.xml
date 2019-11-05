@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MypageActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="마이페이지"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/user_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/image_guideline"
+        tools:srcCompat="@tools:sample/avatars[8]" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/image_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33"
+        />
+
+    <TextView
+        android:id="@+id/profile_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원정보"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/image_guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/id_word_textView"
+        />
+
+    <TextView
+        android:id="@+id/id_word_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="아이디(이메일) :"
+        app:layout_constraintTop_toBottomOf="@id/profile_textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/id_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="11882@naver.com"
+        app:layout_constraintTop_toBottomOf="@id/profile_textView"
+        app:layout_constraintLeft_toRightOf="@id/id_word_textView" />
+
+    <TextView
+        android:id="@+id/name_word_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="이름 :"
+        app:layout_constraintTop_toBottomOf="@id/id_textView"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="김승우"
+        app:layout_constraintTop_toBottomOf="@id/id_textView"
+        app:layout_constraintLeft_toRightOf="@id/name_word_textView"/>
+
+    <TextView
+        android:id="@+id/village_word_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="마을 :"
+        app:layout_constraintTop_toBottomOf="@id/id_word_textView"
+        app:layout_constraintLeft_toRightOf="@+id/name_textView"/>
+
+    <TextView
+        android:id="@+id/village_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="화목마을"
+        app:layout_constraintTop_toBottomOf="@id/id_word_textView"
+        app:layout_constraintLeft_toRightOf="@id/village_word_textView"/>
+
+    <TextView
+        android:id="@+id/ageNum_word_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="기수 :"
+        app:layout_constraintTop_toBottomOf="@id/id_word_textView"
+        app:layout_constraintLeft_toRightOf="@id/village_textView"/>
+
+    <TextView
+        android:id="@+id/ageNum_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="38"
+        app:layout_constraintTop_toBottomOf="@id/id_word_textView"
+        app:layout_constraintLeft_toRightOf="@id/ageNum_word_textView" />
+
+    <Button
+        android:id="@+id/myBroad_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="내가 올린 게시글"
+        android:layout_margin="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/myPhoto_button"
+        app:layout_constraintBottom_toBottomOf="@id/setting_guideline"/>
+
+    <Button
+        android:id="@+id/myPhoto_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="내가 올린 사진"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/myBroad_button"
+        app:layout_constraintBottom_toBottomOf="@id/setting_guideline"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/setting_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66"/>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="설정"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/setting_guideline"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Switch
+        android:id="@+id/music_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배경음악"
+        android:checked="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/alarm_switch"
+        app:layout_constraintTop_toTopOf="@id/setting_guideline"
+        app:layout_constraintBottom_toTopOf="@id/logout_button"/>
+
+    <Switch
+        android:id="@+id/alarm_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알림"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/music_switch"
+        app:layout_constraintTop_toTopOf="@id/setting_guideline"
+        app:layout_constraintBottom_toTopOf="@id/logout_button"/>
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        android:layout_margin="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
